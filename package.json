@@ -1,0 +1,12 @@
+{
+  "name": "rolluptsbuild",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "repository": "git@github.com:11zouzouzou/rolluptsbuild.git",
+  "author": "zouzouzou11 <1096174991@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  }
+}
