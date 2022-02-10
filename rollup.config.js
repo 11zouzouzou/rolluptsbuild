@@ -31,7 +31,7 @@ export default [
             kind === "declaration" ? resolveFile("./dist/index.d.ts") : path,
         },
       }),
-      resolve(),
+      // resolve(),
       sourceMaps(),
       terser({
         compress: {
@@ -40,23 +40,23 @@ export default [
       }),
     ],
   },
-  {
-    input: resolveFile("index.ts"),
-    output: [
-      {
-        file: resolveFile("dist/@types/index.d.ts"),
-        format: "esm",
-      },
-    ],
-    plugins: [
-      typescript({
-        tsconfig: {
-          fileName: resolveFile("tsconfig.json"),
-          hook: (resolveConfig) => ({ ...resolveConfig, declaration: false }),
-        },
-      }),
-      resolve(),
-      dts(),
-    ],
-  },
+  // {
+  //   input: resolveFile("index.ts"),
+  //   output: [
+  //     {
+  //       file: resolveFile("dist/@types/index.d.ts"),
+  //       format: "esm",
+  //     },
+  //   ],
+  //   plugins: [
+  //     typescript({
+  //       tsconfig: {
+  //         fileName: resolveFile("tsconfig.json"),
+  //         hook: (resolveConfig) => ({ ...resolveConfig, declaration: false }),
+  //       },
+  //     }),
+  //     resolve(),
+  //     dts(),
+  //   ],
+  // },
 ];
